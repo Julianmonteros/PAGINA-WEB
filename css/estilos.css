@@ -1,0 +1,17 @@
+/* estos son estilos */
+body {
+  background-color: chocolate;
+}
+h1 {
+  color: antiquewhite;
+}
+p {
+  color: bisque;
+  font-size: 12px;
+  font-family: Helvetica;
+  border: 5px solid;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
