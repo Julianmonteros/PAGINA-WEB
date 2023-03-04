@@ -17,6 +17,42 @@
         labore quaerat qui? Ad?</p>
     <!-- abrir el link en otra pestaña -->
     <a href="https://www.google.com/" target="_blank"></a>
+    <!-- enviar mensaje por correo -->
+    <a href="mailto:franciscomonteros1990@gmail.com" target="_blank">enviar mensaje</a>
+    <br>
+    <!-- hipervinculo con imagenes -->
+    <a href="https://es.reactjs.org/" target="_blank">
+        <img src="/img/logo.png" alt="logo react" width="50px">
+    </a>
+    <br>
+    <!-- botones -->
+    <button onclick="document.location='conceptos.html'">envia a</button>
+    <br>
+    <a href="https://es.reactjs.org/">react</a>
+
+    <hr>
+    <!-- hypervinculos  -->
+    <h2 id="company">Esta es otra compania</h2>
+    <a href="https://es.reactjs.org/#company" target="_blank">otra compania</a>
+    <br>
+    <!-- imagenes -->
+    <img src="/img/paisaje.jpeg" alt="paisaje1">
+    <img src="/img/paisaje2.jpeg" alt="paisaje2">
+    <img src="/img/paisaje3.jpeg" alt="paisaje3">
+    <!-- utilizando mapeado para hipervinculos -->
+    <img src="/img/paisaje4.jpeg" alt="paisaje4" usemap="#mapeado">
+
+    <map name="mapeado">
+        <area shape="rect" coords="0,0,120,120" href="https://es.reactjs.org/#company" onclick="myFunction()"
+            alt="enviar a react">
+
+    </map>
+
+    <script>
+        function myFunction() {
+            alert("ir a la pagina de react");
+        }
+    </script>
 </body>
 
 </html>

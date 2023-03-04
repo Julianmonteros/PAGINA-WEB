@@ -1,12 +1,12 @@
 /* estos son estilos */
 body {
-  background-color: chocolate;
+  background-color: rgb(234, 234, 234);
 }
 h1 {
-  color: antiquewhite;
+  color: rgb(27, 27, 27);
 }
 p {
-  color: bisque;
+  color: rgb(48, 48, 48);
   font-size: 12px;
   font-family: Helvetica;
   border: 5px solid;
@@ -14,4 +14,26 @@ p {
   margin: 20px;
   border-radius: 5px;
   text-align: center;
+}
+/* estilos de etiquetas a */
+a:link {
+  color: red;
+  text-decoration: none;
+  background-color: transparent;
+}
+a:visited {
+  color: purple;
+  text-decoration: none;
+}
+a:hover {
+  color: brown;
+  text-decoration: underline;
+}
+a:active {
+  color: black;
+  text-decoration: underline;
+}
+img {
+  width: 500px;
+  height: 500px;
 }
