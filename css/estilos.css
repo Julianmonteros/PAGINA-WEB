@@ -1,39 +1,108 @@
-/* estos son estilos */
+html,
 body {
-  background-color: rgb(234, 234, 234);
+  height: 100%;
 }
-h1 {
-  color: rgb(27, 27, 27);
+
+body {
+  margin: 0;
+  padding-inline: 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  perspective: 1000px;
+  background-image: radial-gradient(#3c6bb4 30%, #244b84);
 }
-p {
-  color: rgb(48, 48, 48);
-  font-size: 12px;
-  font-family: Helvetica;
-  border: 5px solid;
-  padding: 10px;
-  margin: 20px;
-  border-radius: 5px;
-  text-align: center;
+
+.card,
+.wrapper,
+.content {
+  transform-style: preserve-3d;
 }
-/* estilos de etiquetas a */
-a:link {
-  color: red;
-  text-decoration: none;
+
+.card {
+  position: absolute;
+  animation-duration: 1200mm;
+  width: 200px;
+  height: 290px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
   background-color: transparent;
+  border-radius: 8px;
+  transition: all 200ms;
+  transform: rotateX('60deg');
+  pointer-events: none;
 }
-a:visited {
-  color: purple;
-  text-decoration: none;
+
+.card:nth-child(1) {
+  transform: rotateX('60deg') translateZ(3px);
 }
-a:hover {
-  color: brown;
-  text-decoration: underline;
+
+.card:nth-child(2) {
+  transform: rotateX('60deg') translateZ(6px);
 }
-a:active {
-  color: black;
-  text-decoration: underline;
+
+.card:nth-child(3) {
+  transform: rotateX('60deg') translateZ(9px);
 }
-img {
-  width: 500px;
-  height: 500px;
+
+.wrapper {
+  pointer-events: initial;
+  display: block;
+  position: relative;
+  height: 100%;
+  transition: all var(--duration) ease-out;
+  transform-origin: 40vw 50%;
+}
+
+.content {
+  display: block;
+  height: 100%;
+  transition: all var(--duration);
+}
+
+.face {
+  transition: transform calc(var (--duration) * 3 / 4);
+  transition-delay: calc(var(--duration));
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -moz-backface-visibility: hidden;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  background-color: white;
+}
+
+.front {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5a/Ace_of_spades.svg);
+  border: 1px solid black;
+}
+
+.back {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkKnlurWcUYrlDbGvf8IUz6rLX7oX1hHt7FW_6e4vNOwFfPhmPURXxGK45qVAqW7dtxsY&usqp=CAU);
+  border: 1px solid black;
+}
+.card.flipped:nth-child(1) {
+  transform: rotateX('60deg') translateZ(9px);
+}
+
+.card.flipped:nth-child(2) {
+  transform: rotateX('60deg') translateZ(6px);
+}
+
+.card.flipped:nth-child(3) {
+  transform: rotateX('60deg') translateZ(3px);
+}
+
+.card.flipped .wrapper {
+  transform: rotateY('0.5turn');
+}
+
+.card.flipped .content {
+  transform: rotateY('-0.5turn') rotateY('1.5turn');
 }
